@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+
+import sys
+import os
+
+def create_lore_files(sub_path, file_name=None):
+    path = "/Users/jacobmurphy/Documents/Basilfall/{}".format(sub_path)
+    try:
+        os.mkdir(path)
+        if file_name != None:
+            open('{}/{}.md'.format(path, file_name), "w")
+    except OSError as e:
+        print("Failed to create lore files {}".format(e.message))
+    else:
+        print("Created lore files at {} ".format(sub_path))
+
+
+def create_continent(name):
+    path = "Places/{}".format(name)
+    return create_lore_files(path, "Main Info")
+
+def create_country(continent, country):
+    path = "Places/{}/{}".format(continent, country)
+    create_lore_files(path, "Main Info")
+    create_lore_files(path + "/Cities")
+    create_lore_files(path + "/Villages")
+
+
+def create_city(continent, country, name):
+        path = "Places/{}/{}/Cities/{}".format(continent, country, name)
+        return create_lore_files(path, "Main Info")
+
+def create_village(continent, country, name):
+        path = "Places/{}/{}/Villages/{}".format(continent, country, name)
+        return create_lore_files(path, "Main Info")
+        
+
+def create_family(name, status):
+    path = "People/"
+
+    if status == 'friend':
+        path += "Friends/"
+    elif status == "foe":
+        path += "Enemies/"
+    elif status == None:
+        path += "Other/"
+    path += "Families/{}".format(name)
+
+    create_lore_files(path, "Main Info")
+
+if sys.argv[1] == "continent":
+    create_continent(sys.argv[2])
+
+elif sys.argv[1] == "country":
+    create_country(sys.argv[2], sys.argv[3])
+
+elif sys.argv[1] == "city":
+    create_city(sys.argv[2], sys.argv[3], sys.argv[4])
+
+elif sys.argv[1] == "village":
+    create_village(sys.argv[2], sys.argv[3], sys.argv[4])
+
+elif sys.argv[1] == "family":
+    create_family(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
