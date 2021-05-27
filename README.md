@@ -1,4 +1,4 @@
-# Make Lore is a opinionated Python cli-utility for automating world-building for creatives
+# Make Lore is a opinionated Python cli-utility for automating worldbuilding for creatives.
 
 The goals of this project are **currently** as follows:
    - [ ] Let users set a base folder path using an `init` command
@@ -17,6 +17,6 @@ The goals of this project are **currently** as follows:
 ## Why Markdown files?
 The reason most of the folders that are made use Markdown files (.md) is because it means you can use a variety of tools of your choice to actually edit the files that are made. Here's a few options:
 
- - [Obsidian](https://obsidian.md/) A great tool that helps you visiualise the connections between all your notes and lore using markdown link syntax and a handy graph view. Also has a wide variety of handy plugins! (This is the one I use personally)
- - [Ulysses](https://ulysses.app/) One of the best markdown editors for people who love neat file structures and helpful for setting daily, weekly, or monthly goals
- - [Typora](https://typora.io/) A great, minimal, open-source markdown editor/reader for local files like the ones Make Lore creates 
+ - [Obsidian](https://obsidian.md/): A great tool that helps you visiualise the connections between all your notes and lore using markdown link syntax and a handy graph view. Also has a wide variety of handy plugins! (This is the one I use personally)
+ - [Ulysses](https://ulysses.app/): One of the best markdown editors for people who love neat file structures and helpful for setting daily, weekly, or monthly goals
+ - [Typora](https://typora.io/): A great, minimal, open-source markdown editor/reader for local files like the ones Make Lore creates 
