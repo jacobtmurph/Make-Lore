@@ -3,8 +3,8 @@
 The goals of this project are **currently** as follows:
    - [ ] Let users set a base folder path using an `init` command
      - [ ] Create base folders for Places, People, and Items
-   - [ ] Let users pass arguments like `village` or `country` and create the corect nested folder with a "Main Info.md"  
-     - [ ] Take parameters pertaining to the correct parent folders & name for the nested folder 
+   - [x] Let users pass arguments like `village` or `country` and create the corect nested folder with a "Main Info.md"  
+     - [x] Take parameters pertaining to the correct parent folders & name for the nested folder 
 
 ## Use cases
 
